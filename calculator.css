@@ -1,0 +1,105 @@
+* {
+  margin: 0%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgb(155, 83, 83), purple);
+}
+
+.container {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: max-content;
+  row-gap: 5%;
+  height: 500px;
+  width: 300px;
+  background-color: rgb(52, 31, 70);
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px currentColor;
+}
+.display {
+  background-color: white;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  text-wrap: auto;
+  padding: 0px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  font-size: 30px;
+  border-radius: 10px;
+}
+.input,
+.output {
+  flex: 1; /* Makes both take equal height */
+  width: 100%; /* Ensures full width */
+  max-width: 100%; /* Prevent overflow */
+  padding: 5px;
+  box-sizing: border-box; /* Includes padding and border in size */
+}
+.input {
+  text-align: left;
+  background-color: lightgray;
+}
+.output {
+  display: flex; /* Enable flexbox for alignment */
+  justify-content: flex-end; /* Push text to the bottom vertically */
+  align-items: flex-end;
+  text-align: right;
+  word-wrap: break-word; /* Wrap long words */
+  overflow-wrap: break-word;
+  background-color: lightyellow;
+}
+
+.buttons {
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  grid-auto-rows: auto;
+}
+
+button {
+  background-color: rgb(209, 209, 209);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px currentColor;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px currentColor;
+}
+
+.itemadd {
+  grid-area: 2 / 4 / 4 / 5;
+}
+
+.submit {
+  grid-area: 4 / 4 / 6 / 5;
+}
+
+.item0 {
+  grid-area: 5 /1 / 5 /3;
+}
+
+.itemdot {
+  display: grid; /* Use grid for centering */
+  place-items: center; /* Centers both horizontally and vertically */
+  font-size: 50px; /* Font size for the dot */
+  width: 100%; /* Ensures full width of the grid cell */
+  height: 100%; /* Ensures full height of the grid cell */
+  text-align: center; /* Centers the text */
+  /* Remove any border */
+  /* Remove background */
+}
+/* .submit {
+  grid-row: 4 / span 2;
+} */
