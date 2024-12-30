@@ -63,7 +63,7 @@ submitBtn.addEventListener("click", () => {
       break;
   }
   result = total;
-  output.textContent = total;
+  input.textContent = total;
   temp1 = null;
   temp2 = null;
   operation = null;
